@@ -71,7 +71,6 @@ services:
     env_file:
       - .env
     environment:
-      DB_CONNECTION: pg
       DB_HOST: order-db
       DB_PORT: "5432"
       DB_USER: order_db_user
@@ -97,7 +96,6 @@ services:
     env_file:
       - .env
     environment:
-      DB_CONNECTION: pg
       DB_HOST: warehouse-db
       DB_PORT: "5432"
       DB_USER: warehouse_db_user
