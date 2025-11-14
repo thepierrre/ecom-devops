@@ -65,7 +65,9 @@ services:
     # you already have a Dockerfile for the app
     build:
       context: ../ecom-order
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
+      args:
+        NPM_TOKEN: ${NPM_TOKEN}
     env_file:
       - .env
     environment:
@@ -90,7 +92,9 @@ services:
   warehouse-service:
     build:
       context: ../ecom-warehouse
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
+      args:
+        NPM_TOKEN: ${NPM_TOKEN}
     env_file:
       - .env
     environment:
